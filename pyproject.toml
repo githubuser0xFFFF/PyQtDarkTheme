@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "PyQtDarkTheme2"
-version = "2.1.2"
+version = "2.1.1"
 description = "Flat dark theme for PySide and PyQt."
 authors = ["Yunosuke Ohsugi <63651161+5yutan5@users.noreply.github.com>"]
 license = "MIT"
@@ -23,8 +23,9 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.12,<4.0"
+python = ">=3.12,<3.14"
 darkdetect = "^0.7.1"
+pyside6 = "^6.9.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.10.0"
