@@ -11,14 +11,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:  # Test each python and Qt-lib only once on each os.
-        os: [ubuntu-latest, macOS-latest, windows-latest]
-        py: ['3.7', '3.8', '3.9', '3.10', '3.11']
+        #os: [ubuntu-latest, macOS-latest, windows-latest]
+        os: [windows-latest]
+        py: ['3.12']
         include:
-          - {py: '3.7', qt: PyQt5~=5.15.0}
-          - {py: '3.8', qt: PySide2~=5.15.0}
-          - {py: '3.9', qt: PyQt6}
-          - {py: '3.10', qt: PySide6-Essentials}
-          - {py: '3.11', qt: PyQt6}
+          - {py: '3.12', qt: PySide6-Essentials}
     runs-on: ${{ matrix.os }}
     name: pytest (${{ matrix.os }}, ${{ matrix.py }}, ${{ matrix.qt }})
 

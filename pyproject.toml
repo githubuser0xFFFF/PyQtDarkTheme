@@ -25,7 +25,6 @@ classifiers = [
 [tool.poetry.dependencies]
 python = ">=3.12,<3.14"
 darkdetect = "^0.7.1"
-pyside6 = "^6.9.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.10.0"
