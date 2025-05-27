@@ -15,7 +15,7 @@ jobs:
       - uses: tlambert03/setup-qt-libs@v1
       - uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
+          python-version: "3.12"
       - uses: snok/install-poetry@v1
 
       - name: Get tag
@@ -43,7 +43,7 @@ jobs:
           poetry config pypi-token.testpypi ${{ secrets.TEST_PYPI_TOKEN }}
           poetry publish -r testpypi
 
-      - name: Waite until package is published
+      - name: Wait until package is published
         run: sleep 120
 
       - name: Test testPyPI package
